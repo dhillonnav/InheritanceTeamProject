@@ -28,6 +28,7 @@ public class BakeryMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
         Bagels = new javax.swing.JButton();
         Breads = new javax.swing.JButton();
         Pies = new javax.swing.JButton();
@@ -38,7 +39,6 @@ public class BakeryMenu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 800));
-        setPreferredSize(new java.awt.Dimension(1000, 800));
         getContentPane().setLayout(null);
 
         jPanel1.setMaximumSize(new java.awt.Dimension(1000, 800));
@@ -57,6 +57,17 @@ public class BakeryMenu extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(954, 0, 1000, 800);
+
+        jCheckBox1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jCheckBox1.setForeground(new java.awt.Color(204, 0, 204));
+        jCheckBox1.setText("Back");
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jCheckBox1);
+        jCheckBox1.setBounds(70, 50, 100, 30);
 
         Bagels.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
         Bagels.setForeground(new java.awt.Color(153, 0, 153));
@@ -125,43 +136,55 @@ public class BakeryMenu extends javax.swing.JFrame {
         jLabel2.setMaximumSize(new java.awt.Dimension(1000, 800));
         jLabel2.setMinimumSize(new java.awt.Dimension(1000, 800));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 920, 600);
+        jLabel2.setBounds(-20, 0, 960, 550);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BagelsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BagelsActionPerformed
         // TODO add your handling code here:
-         BakeryMenu bakeryScreen = new BakeryMenu ();
-            bakeryScreen.setDefaultCloseOperation(bakeryScreen.HIDE_ON_CLOSE );
+
+ setDefaultCloseOperation(BakeryMenu.HIDE_ON_CLOSE );
         //setDefaultCloseOperation(.EXIT_ON_CLOSE);
         Bagels bagel = new Bagels();
-        bagel.setVisible (true);   
+        bagel.setVisible (true); 
+        this.setVisible(false);
     }//GEN-LAST:event_BagelsActionPerformed
 
     private void BreadsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BreadsActionPerformed
         // TODO add your handling code here:
          Breads bread = new Breads();
         bread.setVisible (true); 
+        this.setVisible(false);
     }//GEN-LAST:event_BreadsActionPerformed
 
     private void DoughnutsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DoughnutsActionPerformed
         // TODO add your handling code here:
         Doughnuts doughnut = new Doughnuts();
         doughnut.setVisible (true); 
+        this.setVisible(false);
     }//GEN-LAST:event_DoughnutsActionPerformed
 
     private void PiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PiesActionPerformed
         // TODO add your handling code here:
         Pies Pie = new Pies();
         Pie.setVisible (true); 
+        this.setVisible(false);
     }//GEN-LAST:event_PiesActionPerformed
 
     private void CakesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CakesActionPerformed
         // TODO add your handling code here:
         Cakes cake = new Cakes();
         cake.setVisible (true); 
+        this.setVisible(false);
     }//GEN-LAST:event_CakesActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        // TODO add your handling code here:
+        AN a = new AN ();
+        a.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,6 +229,7 @@ public class BakeryMenu extends javax.swing.JFrame {
     private javax.swing.JButton Cakes;
     private javax.swing.JButton Doughnuts;
     private javax.swing.JButton Pies;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
